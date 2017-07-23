@@ -4,7 +4,7 @@ window.onload = function() {
     //  Although it will work fine with this tutorial, it's almost certainly not the most current version.
     //  Be sure to replace it with an updated version before you start experimenting with adding your own code.
 
-    var game = new Phaser.Game(1920, 1080, Phaser.AUTO, '', { preload: preload, create: create, render: render});
+    var game = new Phaser.Game("100%", "100%", Phaser.WEBGL, 'game', { preload: preload, create: create, render: render});
     var rect;
 
     function preload () {
@@ -21,7 +21,7 @@ window.onload = function() {
         graphics.lineStyle(2, 0xffffFF, 1);
         graphics.beginFill(0xfffffFF, 1);
         graphics.drawRect(50, 250, 20, 150);
-        graphics.drawRect(800, 250, 20, 150);
+        graphics.drawRect(game.width - 250 - 50, 250, 20, 150);
         graphics.endFill();
 
         window.graphics = graphics;
